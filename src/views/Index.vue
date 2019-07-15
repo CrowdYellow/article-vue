@@ -1,16 +1,18 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
+    <TheHeader/>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
+import TheHeader from '@/layouts/TheHeader'
+import TheFooter from '@/layouts/TheFooter'
 export default {
   name: 'Index',
-  data () {
-    return {
-      msg: '欢迎来到VUE'
-    }
+  components: {
+    TheHeader,
+    TheFooter,
   }
 }
 </script>
