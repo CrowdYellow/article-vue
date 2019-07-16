@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader/>
+    <TheHeader title="首页"/>
     <main class="main">
       <div v-for="n in 100">这是第{{ n }} 行</div>
     </main>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader/>
+    <TheHeader title="注册"/>
     <main class="main">
       <RegisterForm/>
     </main>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader/>
+    <TheHeader title="登陆"/>
     <main class="main">
       <LoginForm/>
     </main>
