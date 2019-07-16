@@ -1,15 +1,19 @@
 <template>
-  <mt-tabbar v-model="selected">
+  <mt-tabbar v-model="selected" fixed>
     <mt-tab-item id="tab-1">
-      外卖
+      <i slot="icon" class="fa fa-home"></i>
+      首页
     </mt-tab-item>
     <mt-tab-item id="tab-2">
-      订单
+      <i slot="icon" class="fa fa-star"></i>
+      动态
     </mt-tab-item>
     <mt-tab-item id="tab-3">
-      发现
+      <i slot="icon" class="fa fa-comment"></i>
+      消息
     </mt-tab-item>
     <mt-tab-item id="tab-4">
+      <i slot="icon" class="fa fa-user"></i>
       我的
     </mt-tab-item>
   </mt-tabbar>
