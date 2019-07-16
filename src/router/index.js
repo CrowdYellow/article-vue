@@ -1,27 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from "../views/Index";
-import Register from "../views/auth/Register";
-import Login from "../views/auth/Login";
+// 引入 ./routes.js 的默认值
+import routes from './routes'
 
 Vue.use(Router);
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Index
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    }
-  ]
-})
+// 这里删除了原来的 routes 常量
+
+const router =  new Router({
+  mode: 'history',
+  routes
+});
+
+router.beforeEach((to, from, next) => {
+  const auth = router.app.$options.store.state.auth;
+
+  if (auth && to.path.indexOf('/auth/') !== -1) {
+    next('/')
+  } else {
+    next()
+  }
+});
+
+export default router
