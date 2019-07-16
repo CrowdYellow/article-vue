@@ -19,6 +19,12 @@ html, body, #app {
   width: 100%;
   height: 100%;
 }
+main.main{
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  overflow: hidden;
+  overflow-x: auto;
+}
 .mint-tab-item-icon {
   width: 24px;
   height: 24px;

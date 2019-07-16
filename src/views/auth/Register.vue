@@ -2,7 +2,7 @@
   <div>
     <TheHeader/>
     <main class="main">
-      <div v-for="n in 100">这是第{{ n }} 行</div>
+      <RegisterForm/>
     </main>
     <TheFooter/>
   </div>
@@ -11,11 +11,17 @@
 <script>
 import TheHeader from '@/layouts/TheHeader'
 import TheFooter from '@/layouts/TheFooter'
+import RegisterForm from './RegisterForm'
 export default {
-  name: 'Index',
+  name: "Register",
   components: {
     TheHeader,
     TheFooter,
+    RegisterForm,
   }
 }
 </script>
+
+<style scoped>
+
+</style>
